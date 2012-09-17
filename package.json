@@ -1,5 +1,5 @@
 {
-  "name"          : "Strophe.js",
+  "name"          : "strophe",
   "description"   : "Strophe.js is an XMPP library for JavaScript",
   "version"       : "1.0.2",
   "homepage"      : "http://strophe.im/strophejs",
@@ -12,5 +12,13 @@
   "main"          : "./strophe.js",
   "scripts"       : { "install": "make", "update": "make" },
   "directories"   : { "lib": "./src", "test": "./tests" },
-  "engines"       : { "browser": "*" }
+  "engines"       : { "browser": "*" },
+  "jam"           : {
+    "main"        : "./strophe.js",
+    "shim"        : {
+      "strophe": { 
+        "exports" : ["Strophe", "Base64", "MD5"]
+      }
+    }
+  }
 }
